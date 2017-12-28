@@ -1,0 +1,12 @@
+<div *ngIf="customer">
+	<h2>{{ customer.name | uppercase }} Details</h2>
+	<div><span>ID: </span>{{ customer.id }}</div>
+	<div>
+		<label>이름: 
+			<input [(ngModel)]="customer.name" placeholder="name">
+		</label>
+	</div>
+	<div><span>나이: </span>{{ customer.age }}</div>
+	<div><span>성별: </span>{{ customer.gender }}</div>
+	<div><span>상태: </span>{{ customer.status }}</div>
+</div>

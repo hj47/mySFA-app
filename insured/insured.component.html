@@ -1,3 +1,10 @@
-<p>
-  insured works!
-</p>
+<h2>My Customers</h2>
+<ul class="heroes">
+	<li *ngFor="let customer of customers" 
+		[class.selected]="customer===selectedCustomer"
+		(click)="onSelect(customer)">
+		<span class="badge">{{customer.id}}</span> {{customer.name}} ({{customer.age}}) - {{customer.status}}
+	</li>
+</ul>
+<app-cust-detail [customer]="selectedCustomer"></app-cust-detail>
+<app-product [customer]="selectedCustomer"></app-product>
